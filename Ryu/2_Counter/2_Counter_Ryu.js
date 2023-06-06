@@ -3,6 +3,21 @@ let Num = 0;
 const Count_Num = document.querySelector(".Count_box");
 
 const Btn_List = document.querySelectorAll(".btn_box");
+Btn_List.forEach(function(item){
+    item.addEventListener("mouseover", function(hover){
+        const mouse_over_obj = hover.currentTarget;
+        mouse_over_obj.style.backgroundColor = mouse_over_obj.style.borderColor;
+        mouse_over_obj.style.color = "white";
+    })
+});
+
+Btn_List.forEach(function(item){
+    item.addEventListener("mouseout", function(hover){
+        const mouse_over_obj = hover.currentTarget;
+        mouse_over_obj.style.backgroundColor = "white";
+        mouse_over_obj.style.color = "black";
+    })
+});
 
 Btn_List.forEach(function(item){
     item.addEventListener("click", function(e){
