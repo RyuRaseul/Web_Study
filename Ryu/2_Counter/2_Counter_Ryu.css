@@ -30,7 +30,7 @@ body{
     font-size: 20px;
     margin: 15px;
     letter-spacing: 3px;
-    border: solid 3px;
+    border: groove 3px;
     border-radius: 10px;
     padding: 3px 20px 3px 20px;
 }
