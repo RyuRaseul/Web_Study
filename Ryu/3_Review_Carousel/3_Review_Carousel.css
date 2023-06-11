@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.title_container{
+    color: rgb(46, 75, 112);
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.line_con{
+    background-color: rgb(95, 170, 231);
+    width: 100px;
+    height: 5px;
+    margin-top: 10px;
+}
