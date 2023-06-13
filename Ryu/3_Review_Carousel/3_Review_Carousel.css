@@ -8,13 +8,96 @@ body{
 .title_container{
     color: rgb(46, 75, 112);
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 1000;
+    letter-spacing: 5px;
     margin-top: 30px;
 }
 
-.line_con{
+.line_container{
     background-color: rgb(95, 170, 231);
     width: 100px;
     height: 5px;
     margin-top: 10px;
+    margin-bottom: 100px;
+}
+.portrait_container{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(156, 171, 172);
+    box-shadow: 10px -6px 10px rgb(95, 170, 231);
+    margin-bottom: 25px;
+}
+.quote_container{
+    position: relative;
+    left: 20px;
+    top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 45%;
+    background-color: rgb(95, 170, 231);
+}
+.name_container{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.describe_container{
+    text-align: center;
+    text-transform : uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: rgb(97, 167, 224);
+    margin-bottom: 15px;
+}
+.review_container{
+    text-align: center;
+    width: 700px;
+    font-size: 20px;
+    color:rgb(96, 127, 167);
+}
+.arrow_container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+.arrow{
+    width: 12px;
+    height: 12px;
+    border: 5px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: rotate(45deg);
+}
+.left_heading{
+    margin-right: 5px;
+    border-bottom-color: rgb(129, 189, 238);
+    border-left-color: rgb(129, 189, 238);
+}
+.right_heading{
+    margin-left: 5px;
+    border-top-color: rgb(129, 189, 238);
+    border-right-color: rgb(129, 189, 238);
+}
+.surprise_btn{
+    margin-top: 25px;
+    color:rgb(96, 168, 226);
+    font-weight: bolder;
+    background-color: rgba(135, 194, 243, 0.486);
+    border: 3px ridge;
+    border-top-color:rgb(92, 165, 224);
+    border-left-color:rgb(92, 165, 224);
+    border-bottom-color: rgb(56, 53, 53);
+    border-right-color: rgb(56, 53, 53);
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
 }
