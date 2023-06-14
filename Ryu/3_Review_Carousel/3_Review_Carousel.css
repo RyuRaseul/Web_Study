@@ -78,7 +78,14 @@ body{
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
     transform: rotate(45deg);
+    transition-property: width, height;
+    transition-duration: 0;
 }
+.arrow:hover{
+    width: 16px;
+    height: 16px;
+}
+
 .left_heading{
     margin-right: 5px;
     border-bottom-color: rgb(129, 189, 238);

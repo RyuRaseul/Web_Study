@@ -61,7 +61,7 @@ function show_prev(){
         name_text.innerText = Reviews_Object[Reviews_Object.length-1].name;
         job_text.innerText = Reviews_Object[Reviews_Object.length-1].job;
         review_text.innerText = Reviews_Object[Reviews_Object.length-1].review;
-        present_id = Reviews_Object.length;
+        present_id = Reviews_Object.length-1;
         console.log(present_id);
     }
     else{
