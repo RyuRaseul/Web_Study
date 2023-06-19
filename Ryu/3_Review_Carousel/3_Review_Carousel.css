@@ -97,6 +97,7 @@ body{
     border-right-color: rgb(129, 189, 238);
 }
 .surprise_btn{
+    text-align: center;
     margin-top: 25px;
     color:rgb(96, 168, 226);
     font-weight: bolder;
@@ -108,4 +109,11 @@ body{
     border-right-color: rgb(56, 53, 53);
     border-radius: 8px;
     padding: 5px 10px 5px 10px;
+}
+
+.surprise_btn:hover{
+    width: 105px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
 }

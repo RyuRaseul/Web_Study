@@ -44,47 +44,51 @@ const review_text = document.querySelector(".review_container");
 let present_id = 0;
 
 document.addEventListener('DOMContentLoaded', function(){
-    name_text.innerText = Reviews_Object[0].name;
-    job_text.innerText = Reviews_Object[0].job;
-    review_text.innerText = Reviews_Object[0].review;
+    name_text.textContent = Reviews_Object[0].name;
+    job_text.textContent = Reviews_Object[0].job;
+    review_text.textContent = Reviews_Object[0].review;
     console.log("Success");
 })
 
 const prev_btn = document.querySelector(".left_heading");
 const next_btn = document.querySelector(".right_heading");
+const random_btn = document.querySelector(".surprise_btn");
 
-prev_btn.addEventListener("click", show_prev);
-next_btn.addEventListener("click", show_next);
+prev_btn.addEventListener("click", click_prev);
+next_btn.addEventListener("click", click_next);
+random_btn.addEventListener("click", click_surprise);
 
-function show_prev(){
+function click_prev(){
     if(present_id == 0){
-        name_text.innerText = Reviews_Object[Reviews_Object.length-1].name;
-        job_text.innerText = Reviews_Object[Reviews_Object.length-1].job;
-        review_text.innerText = Reviews_Object[Reviews_Object.length-1].review;
         present_id = Reviews_Object.length-1;
-        console.log(present_id);
+        show_present();
     }
     else{
-        name_text.innerText = Reviews_Object[present_id-1].name;
-        job_text.innerText = Reviews_Object[present_id-1].job;
-        review_text.innerText = Reviews_Object[present_id-1].review;
         present_id = present_id - 1;
-        console.log(present_id);
+        show_present();
     }
 }
-function show_next(){
+function click_next(){
     if(present_id == Reviews_Object.length-1){
-        name_text.innerText = Reviews_Object[0].name;
-        job_text.innerText = Reviews_Object[0].job;
-        review_text.innerText = Reviews_Object[0].review;
         present_id = 0;
-        console.log(present_id);
+        show_present();
     }
     else{
-        name_text.innerText = Reviews_Object[present_id+1].name;
-        job_text.innerText = Reviews_Object[present_id+1].job;
-        review_text.innerText = Reviews_Object[present_id+1].review;
         present_id = present_id + 1;
-        console.log(present_id);
+        show_present();
     }
+}
+
+function click_surprise(){
+    random_ind = Math.floor(Math.random() * Reviews_Object.length);
+    while(random_ind == present_id)
+        random_ind = Math.floor(Math.random() * Reviews_Object.length);
+    present_id = random_ind;
+    show_present();
+}
+
+function show_present(){
+    name_text.innerText = Reviews_Object[present_id].name;
+    job_text.innerText = Reviews_Object[present_id].job;
+    review_text.innerText = Reviews_Object[present_id].review;
 }
