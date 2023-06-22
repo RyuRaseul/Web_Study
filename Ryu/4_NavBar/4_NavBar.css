@@ -27,9 +27,11 @@ a{
 }
 .left_text{
     color: black;
+    text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.408);
 }
 .right_text{
     color: rgb(68, 189, 236);
+    text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.408);
 }
 .nav_menu{
     width: 100vw;
