@@ -1,4 +1,4 @@
-const menu_content_lisk = document.querySelectorAll(".menu_content");
+/*const menu_content_lisk = document.querySelectorAll(".menu_content");
 menu_content_lisk.forEach(function(item){
     item.addEventListener("mouseover", function(hover){
         const mouse_over_obj = hover.currentTarget;
@@ -14,3 +14,4 @@ menu_content_lisk.forEach(function(item){
         mouse_over_obj.style.paddingLeft = "10px";
     })
 });
+*/
