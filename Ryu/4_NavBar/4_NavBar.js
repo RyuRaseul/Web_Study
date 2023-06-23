@@ -15,3 +15,24 @@ menu_content_lisk.forEach(function(item){
     })
 });
 */
+
+var toggle_open = false;
+menu_btn = document.querySelector(".toggle_btn");
+menu_contents = document.querySelectorAll(".menu_content");
+menu_btn.addEventListener("click", menu_on_off);
+
+function menu_on_off(){
+    if(toggle_open == false){
+        menu_contents.forEach(element => {
+            element.style.display = 'block';
+        });
+        toggle_open = true;
+    }
+    else{
+        menu_contents.forEach(element => {
+            element.style.display = 'none';
+        });
+        toggle_open = false;
+    }
+}
+
