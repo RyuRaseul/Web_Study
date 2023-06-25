@@ -54,10 +54,11 @@ nav{
     list-style-type: none;
 }
 .menu_content{
+    display: block;
+    box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
     line-height: 40px;
-    display: block;
 }
 .menu_content:hover{
     background-color: rgba(165, 196, 226, 0.521);
