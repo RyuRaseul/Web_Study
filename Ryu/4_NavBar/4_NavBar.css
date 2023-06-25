@@ -111,6 +111,13 @@ nav{
         padding-left: 50px;
         transition: all 1s;
     }
+    .icons_container{
+        display: flex;
+        margin-right: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -10px;
+    }
     .icon_link{
         display: none;
     }
