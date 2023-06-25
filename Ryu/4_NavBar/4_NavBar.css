@@ -15,44 +15,50 @@ a{
 .title_container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: rgb(30, 48, 80);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.521);
     padding-left: 25px;
-    padding-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349);
+}
+.titletext_container{
+    display: flex;
+    flex-direction: row;
 }
 .title_text{
     font-size: 40px;
-    height: 54.8px;
+    line-height: 80px;
     font-weight: normal;
     letter-spacing: 4px;
 }
 .left_text{
-    color: white;
+    color: rgb(0, 0, 0);
     text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.408);
 }
 .right_text{
-    color: rgb(68, 189, 236);
+    color: rgb(51, 69, 172);
     text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.408);
 }
 .nav_menu{
     width: 100vw;
+    margin-left: 200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 25px;
+    align-items: center;
+    font-size: 20px;
     letter-spacing: 3px;
     text-align: center;
-    color: rgb(75, 131, 184);   
+    color: rgb(42, 88, 131);   
     list-style-type: none;
 }
 .menu_content{
-    width: 150px;
     padding-left: 20px;
     padding-right: 20px;
+    line-height: 40px;
+    display: block;
 }
 .menu_content:hover{
-    background-color: rgba(67, 181, 226, 0.404);
+    background-color: rgba(165, 196, 226, 0.521);
     transition: all 1s;
 }
 .menu_link{
@@ -65,16 +71,15 @@ a{
 @media screen and (max-width: 840px){
     .title_container{
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column;
         align-items: flex-start;
-        padding-left: 25px;
-        padding-bottom: 5px;
     }
     .nav_menu{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        margin-left: -25px;
+        padding-left: 20px;
         font-size: 25px;
         letter-spacing: 3px;
         text-align: left;
@@ -93,12 +98,18 @@ a{
         padding-left: 50px;
         transition: all 1s;
     }
+    .icon_link{
+        display: none;
+    }
     .toggle_btn{
         display: block;
         position: absolute;
-        top: 18px;
+        line-height: 80px;
         right: 30px;
         flex-direction: row;
         align-items: flex-end;
+    }
+    .active{
+        display: block;
     }
 }
