@@ -62,8 +62,8 @@ nav{
     line-height: 40px;
 }
 .menu_content:hover{
-    background-color: rgba(165, 196, 226, 0.521);
-    transition: all 1s;
+    background-color: rgba(165, 195, 226, 0.842);
+    transition: all 0.7s;
 }
 .menu_link{
     color: inherit;
@@ -87,16 +87,18 @@ nav{
         box-shadow: none;
     }
     body{
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.349);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.349);
     }
     .shadow_off{
         box-shadow: none;
     }
     .shadow_on{
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.349);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.349);
     }
     .nav_menu{
         width: 100vw;
+        height: 0px;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -108,7 +110,7 @@ nav{
         text-align: left;
         color: rgb(75, 131, 184);
         list-style-type: none;
-        visibility: hidden;
+        transition: all 0.5s;
     }
     .menu_content{
         width: 100vw;
@@ -119,15 +121,19 @@ nav{
     .menu_content:hover{
         background-color: rgba(67, 181, 226, 0.404);
         padding-left: 50px;
-        transition: all 1s;
+        transition: all 0.7s;
     }
     .icons_container{
         display: flex;
+        overflow: hidden;
         margin-right: 0px;
         margin-left: -10px;
+        height: 0px;
+        transition: all 0.5s;
     }
     .icon_link{
-        visibility: hidden;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     .toggle_btn{
         display: block;
@@ -139,12 +145,9 @@ nav{
         align-items: flex-end;
     }
     .menu_active{
-        visibility: visible;
-        transition: all 1s;
+        height: 280px;
     }
-    .icons_active{
-        visibility: visible;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .icon_active{
+        height: 61px;
     }
 }
