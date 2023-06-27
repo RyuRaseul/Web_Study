@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+.sliderbar-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 75px;
+}
+.slider{
+    position: relative;
+    width: 28px;
+    height: 30px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.slider-bars, .slider-bars::before, .slider-bars::after{
+    content: "";
+    width: 28px;
+    height: 8px;
+    background-color: black;
+    left: 0;
+    
+}
