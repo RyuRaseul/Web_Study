@@ -13,13 +13,15 @@ body{
 }
 .sidebar-container{
     display: flex;
+    position: absolute;
     width: 400px;
+    left: -400px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.76);
     box-shadow: 2.5px 0px 10px rgba(0, 0, 0, 0.288);
 }
 .sidebar-content{
-    width: 100%;
+    width: inherit;
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -28,6 +30,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     margin-left: 20px;
     height: 75px;
 }
@@ -45,6 +48,30 @@ body{
     color: rgb(51, 69, 172);
     text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.408);
 }
+.xmark{
+    position: relative;
+    left: 70px;
+    top: 4px;
+    height: 40px;
+}
+.xmark-bars span, .xmark-bars::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 6px;
+    border-radius: 4px;
+    background-color: rgb(137, 198, 255);
+}
+.xmark-bars span{
+    position: relative;
+    top: 18px;
+    transform: rotate(45deg);
+}
+.xmark-bars::after{
+    position: relative;
+    top: 12px;
+    transform: rotate(135deg);
+}
 .menu_content{
     display: block;
     position: relative;
@@ -60,7 +87,7 @@ body{
     line-height: 40px;
 }
 .menu_content:hover{
-    background-color: rgba(165, 195, 226, 0.842);
+    background-color: rgba(200, 225, 250, 0.842);
     transition: all 0.7s;
 }
 .menu_link{
@@ -70,7 +97,7 @@ body{
 .icons_container{
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: inherit;
     position: absolute;
     bottom: 10px;
 }
@@ -78,7 +105,7 @@ body{
     margin: 5px;
 }
 .sliderbar-container{
-    position: relative;
+    position: absolute;
     top: 20px;
     right: 30px;
     height: auto;
@@ -101,4 +128,32 @@ body{
 }
 .slider-bars::after{
     top: 20px;
+}
+.bar-sliding{
+    animation-name: slides;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.bar-out{
+    animation-name: slides-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slides{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(400px);
+    }
+}
+
+@keyframes slides-out{
+    0%{
+        transform: translateX(400px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
