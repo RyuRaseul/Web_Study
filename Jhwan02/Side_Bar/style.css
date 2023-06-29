@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-.close{
-    display: none;
-}
-
-
 body{
     background-color: #EAEAEA;
 }
@@ -28,11 +23,24 @@ a{
     right: 30px;
     border: none;
     cursor: pointer;
-    transition: all 0.6s linear;
+    transition: all 0.4s linear;
+    animation: bounce 1s ease-in-out infinite;
 }
 
 .toggle:hover{
     transform: rotate(90deg);
+}
+
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .side-bar{
@@ -40,9 +48,15 @@ a{
     top: 0;
     left: 0;
     background: #fff;
-    width: 30rem;
+    width: 380px;
     height: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-100%);
 }
+
+.open{
+    transform: translate(0);
+ } 
 
 .side-bar__header{
     display: flex;
@@ -56,6 +70,11 @@ a{
 .close-btn{
     color: red;
     cursor: pointer;
+    transition: all 1s;
+}
+
+.close-btn:hover{
+    transform: rotate(360deg);
 }
 
 .side-bar__list li{
@@ -81,3 +100,8 @@ a{
     padding: 1rem 0.5rem;
 }
 
+@media screen and (max-width : 500px){
+    .side-bar{
+        width: 100%;
+    }
+}
