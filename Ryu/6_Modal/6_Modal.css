@@ -11,10 +11,13 @@ body{
     background-image: url('./img/img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.Origin-Container{
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
-
 .Prev-Modal{
     display: flex;
     flex-direction: column;
