@@ -15,10 +15,11 @@ body{
     display: flex;
     position: absolute;
     width: 400px;
-    left: -400px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.76);
     box-shadow: 2.5px 0px 10px rgba(0, 0, 0, 0.288);
+    transform: translate(-100%);
+    transition: all 1s;
 }
 .sidebar-content{
     width: inherit;
@@ -104,6 +105,9 @@ body{
 .icon_link{
     margin: 5px;
 }
+.icon_link:visited{
+    color: rgb(83, 165, 241);
+}
 .sliderbar-container{
     position: absolute;
     top: 20px;
@@ -130,16 +134,10 @@ body{
     top: 20px;
 }
 .bar-sliding{
-    animation-name: slides;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-.bar-out{
-    animation-name: slides-out;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    transform: translate(0);
 }
 
+/*
 @keyframes slides{
     0%{
         transform: translateX(0);
@@ -157,3 +155,4 @@ body{
         transform: translateX(0);
     }
 }
+*/

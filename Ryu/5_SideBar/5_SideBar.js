@@ -7,11 +7,9 @@ out_btn.addEventListener("click", slide_out);
 
 function slide_open(){
     sliding_container.classList.toggle('bar-sliding');
-    sliding_container.classList.remove('bar-out');
 };
 
 function slide_out(){
-    sliding_container.classList.toggle('bar-out');
     sliding_container.classList.remove('bar-sliding');
 };
 
