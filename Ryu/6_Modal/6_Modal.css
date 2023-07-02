@@ -59,17 +59,13 @@ body{
     color: rgb(0, 174, 255);
 }
 .Modal-Container{
-    visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     content: "";
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(43, 145, 228, 0.486);
+    transform: translate(0, -650px);
+    transition: all 1s;
 }
 .Modal-body{
     width: 750px;
@@ -117,5 +113,10 @@ body{
     transform: rotate(135deg);
 }
 .show{
-    visibility: visible;
+    transform: translate(0, 0);
+}
+.modal-on{
+    position: relative;
+    z-index: 1;
+    background-color: rgba(47, 189, 255, 0.418);
 }
