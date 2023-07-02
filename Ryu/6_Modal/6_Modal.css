@@ -96,7 +96,6 @@ body{
     position: relative;
     top: 20px;
     right: 20px;
-    z-index: 1px;
     height: 40px;
 }
 .xmark-bars span, .xmark-bars::after{
