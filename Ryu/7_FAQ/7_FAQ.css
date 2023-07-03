@@ -81,6 +81,21 @@ body, html{
 .on{
     height: 120px;
 }
-.hidden-btn, .hidden-btn::after{
+.hidden-btn{
     display: none !important;
 }
+/*
+.on .answer-body{
+    height: 120px;
+}
+.off-btn{
+    display: none !important;
+}
+.on .on-btn{
+    display: none !important;
+}
+
+.on .off-btn{
+    display: block !important;
+}
+*/
