@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+button[class*="btn"] {
+    text-decoration: none;
+}
+.btn-content{
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.21);
+    border-bottom: 4px solid rgba(0,0,0,0.21);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    background: rgba(240,210,100,1);
+    background: gradient(linear, 0 0, 0 100%, from(rgba(240,210,100,1)), to(rgba(229,201,96,1)));
+    background: linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0d264', endColorstr='#e5c960', GradientType=0 );
+}
+.btn-content:active{
+    background: #DBC05B;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
+.title-text{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+}
+.underline-container hr{
+    border: 1px solid orange;
+    background-color: orange;
+    width: 100px;
+    height: 3px;
+}
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 600px;
+}
+.btn-content{
+    padding: 8px 18px;  
+    font-size: 14px;
+    margin: 5px;
+}
