@@ -36,13 +36,13 @@ body {
     margin-bottom: 2rem;
 }
 
-.categori__btn{
+.category__btn{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.categori{
+.category{
     font-size: 1rem;
     color: var(--main-color);
     padding: 0.5rem 0.8rem;

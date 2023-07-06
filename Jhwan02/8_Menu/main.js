@@ -1,55 +1,55 @@
 const menu = [
     {
-        categori: "Hamburger",
+        category: "Hamburger",
         img: "img/포레스트.jpg",
         name: "포레스트 버거",
         price: "33,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Hamburger",
+        category: "Hamburger",
         img: "img/헬스키친.jpg",
         name: "헬스키친 버거",
         price: "31,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Hamburger",
+        category: "Hamburger",
         img: "img/야드버드.jpg",
         name: "야드버드 버거",
         price: "27,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Side",
+        category: "Side",
         img: "img/맥앤치즈.jpg",
         name: "트러플'맥 앤 치즈'크로켓",
         price: "16,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Side",
+        category: "Side",
         img: "img/파마산.jpg",
         name: "트러플 파마산 프라이즈",
         price: "19,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Side",
+        category: "Side",
         img: "img/포테이토.jpg",
         name: "스위트 포테이토 프라이즈",
         price: "10,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Shakes",
+        category: "Shakes",
         img: "img/스트로베리.jpg",
         name: "스트로베리 푸딩 & 비스코프 쉐이크",
         price: "13,000원",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae officiis numquam animi beatae, excepturi nemo at repudiandae libero obcaecati ipsam doloribus, nam quos reiciendis, odio velit magni sunt expedita necessitatibus!"
     },
     {
-        categori: "Shakes",
+        category: "Shakes",
         img: "img/스티키.jpg",
         name: "스티키 토피 푸딩 & 브라운 버터 쉐이크",
         price: "13,000원",
@@ -57,7 +57,7 @@ const menu = [
     },
 ];
 
-const btnContainer = document.querySelectorAll(".categori__btn button");
+const btnContainer = document.querySelectorAll(".category__btn button");
 const mainContainer = document.querySelector(".menu__container");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -80,15 +80,15 @@ function firstRendering() {
     mainContainer.innerHTML = showMenu.join("");
 }
 
-function renderingChooseMenu(categori) {
+function renderingChooseMenu(category) {
     let size = 0;
     let showMenu = [];
-    if (categori === "All") {
+    if (category === "All") {
         firstRendering();
     }
     else {
         for (let item of menu) {
-            if (item.categori === categori) {
+            if (item.category === category) {
                 showMenu[size++] = `<div class="menu">
                 <img src="${item.img}" alt="${item.name}" class="menu__img">
                 <div class="menu__info">
