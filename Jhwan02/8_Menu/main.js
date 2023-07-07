@@ -60,53 +60,90 @@ const menu = [
 const btnContainer = document.querySelectorAll(".category__btn button");
 const mainContainer = document.querySelector(".menu__container");
 
-document.addEventListener("DOMContentLoaded", () => {
-    firstRendering();
+document.addEventListener("DOMContentLoaded",() =>{
+    displayMenu(menu);
 })
 
-function firstRendering() {
-    let showMenu = menu.map(function (item) {
+function displayMenu(MenuItem){
+    let showMenu = MenuItem.map(function(e){
         return `<div class="menu">
-        <img src="${item.img}" alt="${item.name}" class="menu__img">
+        <img src="${e.img}" alt="${e.name}" class="menu__img">
         <div class="menu__info">
             <div class="menu__namePrice">
-                <h4 class="menu__name">${item.name}</h4>
-                <h4 class="menu__price">${item.price}</h4>
+                <h4 class="menu__name">${e.name}</h4>
+                <h4 class="menu__price">${e.price}</h4>
             </div>
-            <p class="menu__content">${item.content}</p>
+            <p class="menu__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores esse quia cupiditate eius atque laborum. Atque iste fugit nulla animi, tempore quas libero explicabo reiciendis temporibus beatae, laboriosam consequuntur? Quibusdam!</p>
         </div>
     </div>`
     })
     mainContainer.innerHTML = showMenu.join("");
 }
 
-function renderingChooseMenu(category) {
-    let size = 0;
-    let showMenu = [];
-    if (category === "All") {
-        firstRendering();
-    }
-    else {
-        for (let item of menu) {
-            if (item.category === category) {
-                showMenu[size++] = `<div class="menu">
-                <img src="${item.img}" alt="${item.name}" class="menu__img">
-                <div class="menu__info">
-                    <div class="menu__namePrice">
-                        <h4 class="menu__name">${item.name}</h4>
-                        <h4 class="menu__price">${item.price}</h4>
-                    </div>
-                    <p class="menu__content">${item.content}</p>
-                </div>
-            </div>`
+btnContainer.forEach(function(btn){
+    btn.addEventListener("click", function(e){
+        const category = e.target.innerText;
+        const menuCategory = menu.filter(function(item){
+            if(category === item.category){
+                return item;
             }
+        })
+        if(category === "All"){
+            displayMenu(menu);
         }
-        mainContainer.innerHTML = showMenu.join("");
-    }
-}
-
-btnContainer.forEach(function (item) {
-    item.addEventListener("click", (e) => {
-        renderingChooseMenu(e.target.innerText);
+        else{
+            displayMenu(menuCategory);
+        }
     })
 })
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     firstRendering();
+// })
+
+// function firstRendering() {
+//     let showMenu = menu.map(function (item) {
+//         return `<div class="menu">
+//         <img src="${item.img}" alt="${item.name}" class="menu__img">
+//         <div class="menu__info">
+//             <div class="menu__namePrice">
+//                 <h4 class="menu__name">${item.name}</h4>
+//                 <h4 class="menu__price">${item.price}</h4>
+//             </div>
+//             <p class="menu__content">${item.content}</p>
+//         </div>
+//     </div>`
+//     })
+//     mainContainer.innerHTML = showMenu.join("");
+// }
+
+// function renderingChooseMenu(category) {
+//     let size = 0;
+//     let showMenu = [];
+//     if (category === "All") {
+//         firstRendering();
+//     }
+//     else {
+//         for (let item of menu) {
+//             if (item.category === category) {
+//                 showMenu[size++] = `<div class="menu">
+//                 <img src="${item.img}" alt="${item.name}" class="menu__img">
+//                 <div class="menu__info">
+//                     <div class="menu__namePrice">
+//                         <h4 class="menu__name">${item.name}</h4>
+//                         <h4 class="menu__price">${item.price}</h4>
+//                     </div>
+//                     <p class="menu__content">${item.content}</p>
+//                 </div>
+//             </div>`
+//             }
+//         }
+//         mainContainer.innerHTML = showMenu.join("");
+//     }
+// }
+
+// btnContainer.forEach(function (item) {
+//     item.addEventListener("click", (e) => {
+//         renderingChooseMenu(e.target.innerText);
+//     })
+// })
