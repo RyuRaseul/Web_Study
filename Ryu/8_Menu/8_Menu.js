@@ -72,7 +72,7 @@ const menu_set =[
     },
 
     {
-        category: "Shake",
+        category: "Shakes",
         img: "img/Berries_Smoothie.jpg",
         name: "Berries Smoothie",
         price: "$10",
@@ -110,6 +110,12 @@ const main_container = document.querySelector(".menu-container");
 const btns = document.querySelectorAll(".btn-content");
 document.addEventListener("DOMContentLoaded", displayDefault(menu_set));
 
+btns.forEach(function(item){
+    item.addEventListener("click", function(){
+        tag_Selector(item.innerText, menu_set)
+    });
+});
+
 function displayDefault(item_set){
     let menu_info = item_set.map(function(item){
         return `<div class="menu-content">
@@ -127,8 +133,38 @@ function displayDefault(item_set){
     main_container.innerHTML = menu_info.join("");
 };
 
-btns.forEach(element => tag_Selector(element.innerText));
-
-function tag_Selector(tag, item){
-    
-}
+function tag_Selector(tag, item_set){
+    if(tag == "All"){
+        let menu_info = item_set.map(function(item){
+            return `<div class="menu-content">
+            <img class="menu-image" src="${item.img}">
+            <div class="menu-info">
+                <div class="menu-name-price">
+                    <div class="menu-name">${item.name}</div>
+                    <div class="menu-price">${item.price}</div>
+                    <hr>
+                </div>
+                <div class="menu-text">${item.content}</div>
+            </div>
+        </div>`
+        });
+        main_container.innerHTML = menu_info.join("");
+    }
+    else{
+        let tagged_menu_set = item_set.filter(item => item.category == tag);
+        let menu_info = tagged_menu_set.map(function(item){
+            return `<div class="menu-content">
+            <img class="menu-image" src="${item.img}">
+            <div class="menu-info">
+                <div class="menu-name-price">
+                    <div class="menu-name">${item.name}</div>
+                    <div class="menu-price">${item.price}</div>
+                    <hr>
+                </div>
+                <div class="menu-text">${item.content}</div>
+            </div>
+        </div>`
+        });
+        main_container.innerHTML = menu_info.join("");
+    };
+};
