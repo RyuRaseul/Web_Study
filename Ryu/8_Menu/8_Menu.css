@@ -116,5 +116,7 @@ body{
     border-width: 0px;
 }
 .menu-text{
+    position: relative;
+    top: 10px;
     width: 250px;
 }

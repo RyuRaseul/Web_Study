@@ -105,7 +105,9 @@ document.addEventListener("DOMContentLoaded", function(){
     ind = 0;
 });
 */
+
 const main_container = document.querySelector(".menu-container");
+const btns = document.querySelectorAll(".btn-content");
 document.addEventListener("DOMContentLoaded", displayDefault(menu_set));
 
 function displayDefault(item_set){
@@ -124,3 +126,9 @@ function displayDefault(item_set){
     });
     main_container.innerHTML = menu_info.join("");
 };
+
+btns.forEach(element => tag_Selector(element.innerText));
+
+function tag_Selector(tag, item){
+    
+}
