@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.445);
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.bg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    width: 100px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 6px;
+}
+.btn-content{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    z-index: 1;
+    background-color: rgb(4, 93, 177);
+    border-radius: 5px;
+    transition: all 0.7s;
+}
+.slide{
+    transform: translateX(50px);
+}
+.play-text{
+    position: absolute;
+    z-index: 0;
+    left: 8px;
+    width: 45px;
+    color: rgb(4, 93, 177);
+    user-select: none;
+}
+.pause-text{
+    position: absolute;
+    z-index: 0;
+    right: 2px;
+    width: 45px;
+    color: rgb(4, 93, 177);
+    user-select: none;
+}
+.text-container{
+    font-weight: bold;
+    font-size: 75px;
+    letter-spacing: 10px;
+    color: white;
+}
