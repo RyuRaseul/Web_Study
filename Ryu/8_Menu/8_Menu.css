@@ -100,10 +100,13 @@ body{
 .menu-name{
     position: absolute;
     left: 10px;
+    font-weight: bold;
 }
 .menu-price{
     position: absolute;
     right: 10px;
+    font-weight: bold;
+    color:rgb(238, 176, 61);
 }
 .menu-name-price hr{
     position: absolute;
