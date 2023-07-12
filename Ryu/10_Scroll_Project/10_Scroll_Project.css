@@ -31,7 +31,7 @@ nav{
     display: flex;
     align-items: center;
     height: 70px;
-    padding: 5px;
+    padding: 15px;
 }
 a[href]{
     text-decoration: none;
@@ -47,8 +47,9 @@ li{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    width: 95%;
-    margin-right: 100px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px;
 }
 .logo-container{
     display: flex;
@@ -76,7 +77,7 @@ li{
     font-weight: bold;
     color: white;
     visibility: visible;
-    margin: 0px 30px;
+    margin: 0px 10px;
 }
 .link-content:hover{
     color: rgb(48, 223, 77);
@@ -94,32 +95,47 @@ li{
         justify-content: space-between;
         background-color: white;
         width: 100%;
-        height: 100px;
+        height: auto !important;
         padding: 0px;
+        overflow: visible;
     }
     .nav-center{
-        height: 100px;
+        flex-direction: column;
         margin: 0;
-        width: 90%; 
+        width: 100%; 
     }
     .logo-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
         margin-left: 0px;
     }
     .logo-content{
         color:rgb(35, 48, 82);
     }
     .link-container{
+        background-color: white;
+        align-items: flex-start;
         flex-direction: column;
-        position: absolute;
-        top: 100px;
-        left: 0px;
-        width: 100%;
+        height: auto !important;
+    }
+    .link-container li{
+        padding-left: 20px;
+        padding-right: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .link-content{
         margin: 0px;
+        color: rgb(35, 48, 82);
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .bar-container{
-        margin-right: 20px;
+        margin-right: 0px;
     }
     .bar-content{
         visibility: visible;
@@ -130,7 +146,7 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 .title-text{
     display: flex;
