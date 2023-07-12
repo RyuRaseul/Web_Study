@@ -28,10 +28,16 @@ main{
     flex-direction: column;
 }
 nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
     padding: 5px;
 }
 a[href]{
     text-decoration: none;
+}
+li{
+    list-style-type: none;
 }
 .nav-center{
     box-sizing: border-box;
@@ -41,9 +47,8 @@ a[href]{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-    margin-left: 100px;
-    margin-right: 70px;
-    width: 80%;
+    width: 95%;
+    margin-right: 100px;
 }
 .logo-container{
     display: flex;
@@ -53,10 +58,11 @@ a[href]{
 }
 .logo-content{
     transform: scale(1.5);
+    color:rgb(35, 48, 82);
 }
 .logo-content:hover{
     transform: scale(2);
-    transition: all 0.5s;
+    transition: all 0.7s;
 }
 .link-container{
     box-sizing: border-box;
@@ -69,10 +75,55 @@ a[href]{
     font-size: 25px;
     font-weight: bold;
     color: white;
+    visibility: visible;
+    margin: 0px 30px;
 }
 .link-content:hover{
     color: rgb(48, 223, 77);
     transition: all 0.5s;
+}
+.bar-container{
+    margin-right: 20px;
+}
+.bar-content{
+    visibility: hidden;
+}
+@media screen and (max-width: 840px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        width: 100%;
+        height: 100px;
+        padding: 0px;
+    }
+    .nav-center{
+        height: 100px;
+        margin: 0;
+        width: 90%; 
+    }
+    .logo-container{
+        margin-left: 0px;
+    }
+    .logo-content{
+        color:rgb(35, 48, 82);
+    }
+    .link-container{
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 100%;
+    }
+    .link-content{
+        margin: 0px;
+    }
+    .bar-container{
+        margin-right: 20px;
+    }
+    .bar-content{
+        visibility: visible;
+    }
 }
 .banner-container{
     display: flex;
@@ -109,14 +160,14 @@ a[href]{
     padding: 10px;
 }
 #about, #service, #tour{
-    height: 80vh;
-    width: 100%;
+    height: 90vh;
     text-align: center;
 }
 #about, #tour{
-    background-color: rgba(214, 214, 214, 0.123);
+    background-color: rgba(158, 158, 158, 0.377);
 }
 .subtitle{
+    display: inline;
     font-size: 50px;
     font-weight: bold;
     letter-spacing: 5px;
@@ -126,4 +177,14 @@ a[href]{
 .subtitle span{
     color: rgb(31, 186, 224);
     text-transform: uppercase
+}
+footer .section{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background-color: rgb(35, 48, 82);
+    color: white;
+    font-size: 17px;
+    letter-spacing: 5px;
 }
