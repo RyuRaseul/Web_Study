@@ -2,26 +2,54 @@
     margin: 0;
     padding: 0;
 }
-body, html, header, main{
+html, header{
     display: flex;
     width: 100%;
-    height: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    overflow-y: scroll;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url(img/background.jpg) center/cover no-repeat;
+}
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 nav{
-    position: absolute;
+    width: 100%;
+    padding: 5px;
+}
+a[href]{
+    text-decoration: none;
+}
+.nav-center{
+    box-sizing: border-box;
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    height: 100px;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 85%;
 }
 .logo-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    left: 20px;
     width: 100px;
 }
 .logo-content{
@@ -31,32 +59,72 @@ nav{
     transform: scale(2);
     transition: all 0.5s;
 }
-.menu-container{
+.link-container{
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-    right: 100px;
-    width: 800px;
 }
-.menu-content{
-    padding: 20px;
-    font-size: 30px;
+.link-content{
+    padding: 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
     color: white;
 }
-.menu-content:hover{
+.link-content:hover{
     color: rgb(48, 223, 77);
     transition: all 0.5s;
 }
-main{
-    position: absolute;
+.banner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
-.background-container{
-    position: absolute;
-    z-index: 0;
+.title-text{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+.main-text{
+    position: relative;
+    top: 20px;
+    color: rgb(255, 255, 255);
+    width: 600px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+    border: 1px solid white;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+#about, #service, #tour{
+    height: 80vh;
     width: 100%;
-    height: 100%;
-    background-image: url('./img/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-align: center;
+}
+#about, #tour{
+    background-color: grey;
+}
+.subtitle{
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: black;
+    text-transform: uppercase;
+}
+.subtitle span{
+    color: rgb(31, 186, 224);
+    text-transform: uppercase
 }
