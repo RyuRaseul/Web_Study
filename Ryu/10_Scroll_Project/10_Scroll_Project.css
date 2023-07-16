@@ -175,9 +175,8 @@ li{
 .main-text{
     top: 20px;
     color: rgb(255, 255, 255);
-    width: 600px;
-    font-size: 25px;
-    font-weight: bold;
+    width: 700px;
+    font-size: 15px;
     margin-bottom: 30px;
 }
 .btn-container{
@@ -190,6 +189,10 @@ li{
     font-weight: bold;
     color: white;
     padding: 10px;
+}
+.btn-container:hover{
+    background-color: white;
+    color:rgb(35, 48, 82);
 }
 #about, #service, #tour{
     height: 90vh;
