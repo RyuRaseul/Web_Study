@@ -22,11 +22,15 @@ text_links.forEach(function(link){
 
         const id = e.currentTarget.getAttribute("href").slice(1);
         const linked_section = document.getElementById(id);
-
-        let location =  linked_section.getBoundingClientRect().y;
-        console.log(location);
-        
-        window.scrollTo({top: location, behavior: "smooth"});
+        const isFixed = nav_bar.classList.contains("fixed");
+        let location2 = linked_section.offsetTop;
+        console.log(location2);
+        if(isFixed){
+            window.scrollTo({top: location2-nav_height, behavior: "smooth"});
+        }
+        else{
+            window.scrollTo({top: location2-nav_height*2, behavior: "smooth"});
+        }
     });
 });
 
