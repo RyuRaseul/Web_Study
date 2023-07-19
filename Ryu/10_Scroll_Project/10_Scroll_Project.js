@@ -4,6 +4,7 @@ date_content.innerText = today.getFullYear() + ".";
 
 
 const nav_bar = document.querySelector("#nav");
+const top_link = document.querySelector(".top-link");
 document.addEventListener("scroll", function(){
     var scroll_position = document.documentElement.scrollTop;
     if(scroll_position > 80){
@@ -12,25 +13,35 @@ document.addEventListener("scroll", function(){
     else{
         nav_bar.classList.remove("fixed");
     }
+
+    if(scroll_position > 400){
+        top_link.classList.add("show-link");
+    }
+    else{
+        top_link.classList.remove("show-link");
+    }
 });
 
 const text_links = document.querySelectorAll(".link-content");
-var nav_height = nav_bar.offsetHeight;
 text_links.forEach(function(link){
     link.addEventListener("click", function(e){
         e.preventDefault();
 
         const id = e.currentTarget.getAttribute("href").slice(1);
         const linked_section = document.getElementById(id);
+        const links_container = document.querySelector(".link-container");
+        const nav_height = nav_bar.offsetHeight;
         const isFixed = nav_bar.classList.contains("fixed");
-        let location2 = linked_section.offsetTop;
-        console.log(location2);
-        if(isFixed){
-            window.scrollTo({top: location2-nav_height, behavior: "smooth"});
+        let location = linked_section.offsetTop;
+        if(!isFixed){
+            location = location - nav_height;
         }
-        else{
-            window.scrollTo({top: location2-nav_height*2, behavior: "smooth"});
+        if(links_container.getBoundingClientRect().height > 40){
+            location = location + links_container.getBoundingClientRect().height;
+            links_container.classList.remove("slide");
         }
+        console.log(location);
+        window.scrollTo({top: location-nav_height, behavior: "smooth"});
     });
 });
 

@@ -63,7 +63,7 @@ li{
     justify-content: center;
     width: 100px;
 }
-.logo-content{
+.link-content.logo-content{
     transform: scale(1.5);
     color:rgb(35, 48, 82);
 }
@@ -222,4 +222,35 @@ footer .section{
     color: white;
     font-size: 17px;
     letter-spacing: 5px;
+}
+.top-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    background-color: hsla(182, 63%, 54%);
+    border-radius: 10px;
+    visibility: hidden;
+    animation: bounce 2s ease-in-out infinite;
+}
+.show-link{
+    visibility: visible;
+}
+
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
