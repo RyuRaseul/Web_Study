@@ -36,7 +36,7 @@ text_links.forEach(function(link){
         if(!isFixed){
             location = location - nav_height;
         }
-        if(links_container.getBoundingClientRect().height > 40){
+        if(links_container.getBoundingClientRect().height > 50){
             location = location + links_container.getBoundingClientRect().height;
             links_container.classList.remove("slide");
         }
