@@ -48,8 +48,8 @@ links.forEach((link) =>{
 
         const nav_height = nav.offsetHeight;
         let location = linked_section.offsetTop;
-        
-        if(navBar.getBoundingClientRect().height>50){
+
+        if(navBar.getBoundingClientRect().height>95){
             location += navBar.getBoundingClientRect().height;
             navBar.classList.remove("show-links");
         }
