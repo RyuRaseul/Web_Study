@@ -21,13 +21,18 @@ toTop.addEventListener("click",(e) => {
 
 // nav-bar 고정 & toTop 버튼 표시
 document.addEventListener("scroll", function (){
-    const screenHeight = document.documentElement.scrollTop;
-    if(screenHeight>100){
-        toTop.classList.add("show");
+    const scrollHeight = document.documentElement.scrollTop;
+    const navHeight = nav.getBoundingClientRect().height;
+    if(scrollHeight>navHeight){
         nav.classList.add("fixed");
     }else{
-        toTop.classList.remove("show");
         nav.classList.remove("fixed");
+    }
+
+    if(scrollHeight>500){
+        toTop.classList.add("show");
+    }else{
+        toTop.classList.remove("show");
     }
 })
 
@@ -40,8 +45,10 @@ links.forEach((link) =>{
         
         const id = e.currentTarget.getAttribute("href").slice(1);
         const linked_section = document.getElementById(id);
+
         const nav_height = nav.offsetHeight;
         let location = linked_section.offsetTop;
+        
         if(navBar.getBoundingClientRect().height>50){
             location += navBar.getBoundingClientRect().height;
             navBar.classList.remove("show-links");
